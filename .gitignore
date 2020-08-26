@@ -1,1 +1,4 @@
 ﻿.vs/CPSI_MVC/v16
+obj/
+bin/
+.vs
