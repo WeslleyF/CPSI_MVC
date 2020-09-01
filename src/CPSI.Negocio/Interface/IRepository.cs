@@ -12,8 +12,8 @@ namespace CPSI.Negocio.Interface
         Task Adicionar(TEntidade entidade);
         Task Atualizar(TEntidade entidade);
         Task Remover(TEntidade entidade);
-        Task<IEnumerable<TEntidade>> ObterTodos();
-        Task<IEnumerable<TEntidade>> Filtrar(Expression<Func<TEntidade, bool>> expression);
+        Task<List<TEntidade>> ObterTodos();
+        Task<List<TEntidade>> Filtrar(Expression<Func<TEntidade, bool>> expression);
         Task<TEntidade> ObterPorId(int id);
         Task<int> SaveChanges();
 

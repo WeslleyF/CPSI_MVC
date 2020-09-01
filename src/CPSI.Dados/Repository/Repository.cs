@@ -40,7 +40,7 @@ namespace CPSI.Dados.Repository
             await SaveChanges();
         }
 
-        public virtual async Task<IEnumerable<TEntidade>> ObterTodos()
+        public virtual async Task<List<TEntidade>> ObterTodos()
         {
             return await DBSet.ToListAsync();
         }
@@ -48,7 +48,7 @@ namespace CPSI.Dados.Repository
         {
             return await DBSet.FindAsync(id);
         }
-        public virtual async Task<IEnumerable<TEntidade>> Filtrar(Expression<Func<TEntidade, bool>> expression)
+        public virtual async Task<List<TEntidade>> Filtrar(Expression<Func<TEntidade, bool>> expression)
         {
             return await DBSet.AsNoTracking().Where(expression).ToListAsync();
         }
