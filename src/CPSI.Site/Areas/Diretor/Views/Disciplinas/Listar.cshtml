@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CPSI.Negocio.Modelo.Disciplina>
+
+@{
+    ViewData["Title"] = "Disciplinas";
+}
+
+<p>
+    <a class="btn" asp-action="Cadastrar">Cadastrar Disciplina</a>
+</p>
+
+<h4>Disciplinas</h4>
+
+<table class="highlight">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                Operações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalhar", "Detalhar", new {id=item.Id}) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

@@ -17,6 +17,7 @@ using CPSI.Negocio.Service;
 using CPSI.Dados.Repository;
 using CPSI.Site.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.Options;
 
 namespace CPSI.Site
 {
@@ -29,24 +30,33 @@ namespace CPSI.Site
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            string conexao = _configuration.GetConnectionString("ConnPG");
+
             services.AddEntityFrameworkNpgsql()
-                .AddDbContext<CPSIContext>(op => op.UseNpgsql(_configuration.GetConnectionString("ConnPG")));
+                .AddDbContext<CPSIContext>(op => op.UseNpgsql(conexao));
 
             //Configuração do Identity
             
             services.AddEntityFrameworkNpgsql().AddDbContext<IDentityContext>(options =>
-                    options.UseNpgsql(
-                        _configuration.GetConnectionString("ConnPG")));
+                options.UseNpgsql(conexao)
+                );
 
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(o => {
+                   o.Password.RequireDigit = false;
+                   o.Password.RequireLowercase = false;
+                   o.Password.RequireUppercase = false;
+                   o.Password.RequireNonAlphanumeric = false;
+                   o.Password.RequiredLength = 5;
+                })
                 .AddEntityFrameworkStores<IDentityContext>();
+
+          
 
             //
 
-            services.AddMvc();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-            services.AddMvc()
+            services.AddControllersWithViews()
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
 
             //Injeção de dependência
@@ -64,18 +74,25 @@ namespace CPSI.Site
             
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+            
             app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "MyArea",
-                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                      areaName: "Diretor",
+                      name : "Diretor",
+                      pattern: "{area:exists}/{controller=Inicial}/{action=Inicial}"
+                    );
 
                 endpoints.MapControllerRoute(
                     name: "Padrao",
                     pattern: "{controller=Inicial}/{action=Inicial}");
 
+                endpoints.MapRazorPages();
 
             });
         }

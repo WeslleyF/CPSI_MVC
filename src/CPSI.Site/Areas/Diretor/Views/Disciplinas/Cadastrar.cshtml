@@ -1,0 +1,26 @@
+﻿@model CPSI.Negocio.Modelo.Disciplina
+
+@{
+    ViewData["Title"] = "Cadastrar Disciplina";
+}
+
+<h4>Cadastrar Disciplina</h4>
+<hr />
+<div class="">
+    <div class="">
+        <form asp-action="Cadastrar">
+            <div asp-validation-summary="ModelOnly" class=""></div>
+            <div class="">
+                <label asp-for="Nome" class=""></label>
+                <input asp-for="Nome" class="" />
+                <span asp-validation-for="Nome" class=""></span>
+            </div>
+            <div class="">
+                <input type="submit" value="Salvar" class="btn" />
+                <a class="btn" asp-action="Listar">Voltar a Listagem</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

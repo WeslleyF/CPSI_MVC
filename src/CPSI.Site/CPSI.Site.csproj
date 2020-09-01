@@ -6,14 +6,66 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\js\" />
+    <Compile Remove="Areas\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Views\Identity\**" />
+    <Content Remove="Areas\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Views\Identity\**" />
+    <EmbeddedResource Remove="Areas\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Views\Identity\**" />
+    <None Remove="Areas\**" />
+    <None Remove="Models\**" />
+    <None Remove="Views\Identity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Areas\Diretor\Controllers\DisciplinasController.cs" />
+    <Compile Include="Areas\Diretor\Controllers\InicialController.cs" />
+    <Compile Include="Areas\Identity\Pages\Account\Login.cshtml.cs" />
+    <Compile Include="Areas\Identity\Pages\Account\Logout.cshtml.cs" />
+    <Compile Include="Areas\Identity\Pages\Account\Register.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Areas\Diretor\Views\_viewimports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Areas\Diretor\Views\_viewstart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Diretor\Data\" />
+    <Folder Include="Areas\Diretor\Models\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Diretor\Views\Disciplinas\Cadastrar.cshtml" />
+    <None Include="Areas\Diretor\Views\Disciplinas\Detalhar.cshtml" />
+    <None Include="Areas\Diretor\Views\Disciplinas\Editar.cshtml" />
+    <None Include="Areas\Diretor\Views\Disciplinas\Listar.cshtml" />
+    <None Include="Areas\Diretor\Views\Inicial\Inicial.cshtml" />
+    <None Include="Areas\Diretor\Views\Shared\_layout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Login.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Logout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Register.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+    <None Include="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\Identity\Pages\_ViewImports.cshtml" />
+    <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

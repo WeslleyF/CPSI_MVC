@@ -5,21 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CPSI.Site.Controllers
+namespace CPSI.Site.Areas.Diretor.Controllers
 {   
+    [Area("Diretor")]
     [Authorize]
     public class InicialController : Controller
     {
-        [AllowAnonymous]
-        [Route("")]
-        [Route("Inicial")]
+        [Route("Diretor/Inicial")]
         public IActionResult Inicial()
-        {
-            return View();
-        }
-
-        [Route("Modulos")]
-        public IActionResult Modulos()
         {
             return View();
         }

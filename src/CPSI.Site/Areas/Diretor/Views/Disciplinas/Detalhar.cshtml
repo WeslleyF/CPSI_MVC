@@ -1,0 +1,20 @@
+﻿@model CPSI.Negocio.Modelo.Disciplina
+
+@{
+    ViewData["Title"] = "Detalhes da Disciplina";
+}
+
+    <h4>Detalhes da Disciplina</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col s4">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col s4">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+<div>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+    <a asp-action="Listar">Voltar a Listagem</a>
+</div>

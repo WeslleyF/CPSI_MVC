@@ -11,6 +11,7 @@
     <title>@ViewData["Title"]</title>
 
     <link rel="stylesheet" href="~/lib/materialize/css/materialize.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="orange darken-4">
     <header>
@@ -18,7 +19,7 @@
             <div class="nav-wrapper container">
                 <a id="logo-container" href="#" class="brand-logo">CPSI</a>
                 <ul class="right">
-                    <li><a class="waves-effect waves-light btn orange darken-4">Entrar</a></li>
+                    <partial name="_LoginPartial" />
                 </ul>
             </div>
         </nav>
@@ -28,6 +29,8 @@
         @RenderBody()
     </div>
     <script type="text/javascript" src="~/lib/materialize/js/materialize.js"></script>
+    
+    @RenderSection("Scripts")
 </body>
 
 </html>
