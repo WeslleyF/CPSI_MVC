@@ -18,6 +18,7 @@ using CPSI.Dados.Repository;
 using CPSI.Site.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
+using CPSI.Site.Extensions;
 
 namespace CPSI.Site
 {
@@ -35,33 +36,14 @@ namespace CPSI.Site
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<CPSIContext>(op => op.UseNpgsql(conexao));
 
-            //Configuração do Identity
-            
-            services.AddEntityFrameworkNpgsql().AddDbContext<IDentityContext>(options =>
-                options.UseNpgsql(conexao)
-                );
-
-            services.AddDefaultIdentity<IdentityUser>(o => {
-                   o.Password.RequireDigit = false;
-                   o.Password.RequireLowercase = false;
-                   o.Password.RequireUppercase = false;
-                   o.Password.RequireNonAlphanumeric = false;
-                   o.Password.RequiredLength = 5;
-                })
-                .AddEntityFrameworkStores<IDentityContext>();
-
-          
-
-            //
+            services.ConfigurarIdentity(conexao);
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             services.AddControllersWithViews()
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
 
-            //Injeção de dependência
-            services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
-            services.AddScoped<IDisciplinaService, DisciplinaService>();
+            services.CarregarDependencias();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
