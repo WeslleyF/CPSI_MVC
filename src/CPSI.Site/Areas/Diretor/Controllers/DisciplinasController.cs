@@ -53,15 +53,14 @@ namespace CPSI.Site.Areas.Diretor.Controllers
         public async Task<IActionResult> Editar(int Id)
         {
             Disciplina disciplina = await _disciplinaService.ObterPorId(Id);
-
             return View(disciplina);
         }
 
         [HttpPost]
-        public IActionResult Editar(Disciplina disciplina)
+        public async Task<IActionResult> Editar(Disciplina disciplina)
         {
-           _disciplinaService.Atualizar(disciplina);
-            return RedirectToAction("Listar");
+           await _disciplinaService.Atualizar(disciplina);
+           return RedirectToAction("Detalhar", new {id = disciplina.Id });
         }
     }
 }
