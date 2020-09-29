@@ -9,6 +9,10 @@ namespace CPSI.Negocio.Modelo
     {
         [DisplayName("Disciplina")] 
         public string Nome { get; set; }
+
+        //Relacionamentos
+        public List<Turma> turmas {get; set;}
+
         public Disciplina()
         {
 
