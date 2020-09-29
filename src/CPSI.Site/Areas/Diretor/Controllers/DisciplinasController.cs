@@ -32,21 +32,17 @@ namespace CPSI.Site.Areas.Diretor.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Cadastrar(IFormCollection form)
+        public async Task<IActionResult> Cadastrar([FromForm] Disciplina d)
         {
-            Disciplina disciplina = new Disciplina();
-            disciplina.Nome = form["Nome"];
-
+            Disciplina disciplina = d;
             await _disciplinaService.Adicionar(disciplina);
-
-            return RedirectToAction("Listar");
+            return RedirectToAction("Detalhar", new { id = disciplina.Id });
         }
 
         [HttpGet("Diretor/Disciplinas/Detalhar/{Id:int}")]
         public async Task<IActionResult> Detalhar(int Id)
         {
             Disciplina disciplina = await _disciplinaService.ObterPorId(Id);
-
             return View(disciplina);
         }
 
