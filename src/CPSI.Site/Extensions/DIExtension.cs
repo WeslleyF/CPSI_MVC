@@ -18,6 +18,9 @@ namespace CPSI.Site.Extensions
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
             services.AddScoped<IDisciplinaService, DisciplinaService>();
 
+            services.AddScoped<ITurmaRepository, TurmaRepository>();
+            services.AddScoped<ITurmaService, TurmaService>();
+
             return services;
         }
     }

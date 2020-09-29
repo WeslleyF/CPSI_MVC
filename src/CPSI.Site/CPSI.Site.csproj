@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="Areas\Diretor\Controllers\DisciplinasController.cs" />
     <Compile Include="Areas\Diretor\Controllers\InicialController.cs" />
+    <Compile Include="Areas\Diretor\Controllers\TurmasController.cs" />
     <Compile Include="Areas\Identity\Pages\Account\Login.cshtml.cs" />
     <Compile Include="Areas\Identity\Pages\Account\Logout.cshtml.cs" />
     <Compile Include="Areas\Identity\Pages\Account\Register.cshtml.cs" />
@@ -42,6 +43,7 @@
   <ItemGroup>
     <Folder Include="Areas\Diretor\Data\" />
     <Folder Include="Areas\Diretor\Models\" />
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
@@ -52,7 +54,12 @@
     <None Include="Areas\Diretor\Views\Disciplinas\Editar.cshtml" />
     <None Include="Areas\Diretor\Views\Disciplinas\Listar.cshtml" />
     <None Include="Areas\Diretor\Views\Inicial\Inicial.cshtml" />
+    <None Include="Areas\Diretor\Views\Shared\_DisciplinasPartial.cshtml" />
     <None Include="Areas\Diretor\Views\Shared\_layout.cshtml" />
+    <None Include="Areas\Diretor\Views\Turmas\Cadastrar.cshtml" />
+    <None Include="Areas\Diretor\Views\Turmas\Detalhar.cshtml" />
+    <None Include="Areas\Diretor\Views\Turmas\Editar.cshtml" />
+    <None Include="Areas\Diretor\Views\Turmas\Listar.cshtml" />
     <None Include="Areas\Identity\Pages\Account\Login.cshtml" />
     <None Include="Areas\Identity\Pages\Account\Logout.cshtml" />
     <None Include="Areas\Identity\Pages\Account\Register.cshtml" />
@@ -82,5 +89,7 @@
     <ProjectReference Include="..\CPSI.Dados\CPSI.Dados.csproj" />
     <ProjectReference Include="..\CPSI.Negocio\CPSI.Negocio.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
