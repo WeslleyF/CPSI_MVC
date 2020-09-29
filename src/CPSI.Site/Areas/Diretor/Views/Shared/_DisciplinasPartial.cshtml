@@ -1,0 +1,24 @@
+﻿@model CPSI.Negocio.Modelo.Turma
+
+@{ 
+    //Validação para definir se a turma não tem disciplina selecionada
+    int disciplinaSel = 0;
+
+    if (Model != null)
+    {
+        disciplinaSel = Model.Disciplina.Id;
+    }
+
+}
+
+
+<label>Disciplinas</label>
+<select class="browser-default" asp-for="DisciplinaId">
+    <option selected=@(disciplinaSel == 0) value="0">Nenhuma Selecionada</option>
+
+    @foreach (var item in ViewBag.Disciplinas)
+    {
+       <option selected=@(disciplinaSel == @item.Id) value="@item.Id">@item.Nome</option>
+    }
+
+</select>

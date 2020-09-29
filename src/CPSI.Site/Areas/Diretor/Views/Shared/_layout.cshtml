@@ -17,19 +17,20 @@
 
     <nav class="light-blue darken-1">
         <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo">CPSI</a>
+            <a asp-action="Modulos" asp-controller="Inicial" class="brand-logo">CPSI</a>
             <ul class="right">
                 <partial name="_LoginPartial" />
             </ul>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a asp-area="Diretor" asp-controller="Disciplinas" asp-action="Listar">Disciplinas</a></li>
+                <li><a asp-area="Diretor" asp-controller="Turmas" asp-action="Listar">Turmas</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a>Disciplinas</a></li>
+        <li><a asp-area="Diretor" asp-controller="Disciplinas" asp-action="Listar">Disciplinas</a></li>
     </ul>
 
     <div class="container">
