@@ -1,0 +1,45 @@
+﻿@model CPSI.Negocio.Modelo.Turma
+
+@{
+    
+}
+
+
+<div>
+    <h4>Turma</h4>
+    <hr />
+
+    <table class="striped">
+        <tr>
+            @Html.DisplayFor(model => model.Nome)
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Ano)</td>
+            <td>@Html.DisplayFor(model => model.Ano)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Disciplina.Nome)</td>
+            <td>@Html.DisplayFor(model => model.Disciplina.Nome)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.QtdVagas)</td>
+            <td>@Html.DisplayFor(model => model.QtdVagas)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Horario)</td>
+            <td>@Html.DisplayFor(model => model.Horario)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.DataInicio)</td>
+            <td>@Html.DisplayFor(model => model.DataInicio)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.DataFim)</td>
+            <td>@Html.DisplayFor(model => model.DataFim)</td>
+        </tr>
+    </table>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Editar", new {id = Model.Id}) |
+    <a asp-action="Listar">Voltar à Listagem</a>
+</div>
