@@ -1,0 +1,7 @@
+Metas de desenvolvimento:
+
+[]Mudar a solução/Projeto de CPSI para educar afim de mantê-lo de forma genérica.
+[]Implementar um sistema de log na aplicação
+[]Sistema de log personalizado
+[]Implementar um atributo de validação personalizado
+[]Implementar algum mapaemento de objeto
