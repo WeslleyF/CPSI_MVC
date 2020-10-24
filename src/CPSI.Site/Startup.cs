@@ -10,17 +10,17 @@ using Microsoft.Extensions.Hosting;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore;
-using CPSI.Dados.Context;
+using Educar.Dados.Context;
 using Microsoft.Extensions.Configuration;
-using CPSI.Negocio.Interface;
-using CPSI.Negocio.Service;
-using CPSI.Dados.Repository;
-using CPSI.Site.Data;
+using Educar.Negocio.Interface;
+using Educar.Negocio.Service;
+using Educar.Dados.Repository;
+using Educar.Site.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
-using CPSI.Site.Extensions;
+using Educar.Site.Extensions;
 
-namespace CPSI.Site
+namespace Educar.Site
 {
     public class Startup
     {

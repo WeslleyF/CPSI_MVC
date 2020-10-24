@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CPSI.Negocio.Modelo.Validacao
+namespace Educar.Negocio.Modelo.Validacao
 {
     class DisciplinaValidacao : AbstractValidator<Disciplina> 
     {

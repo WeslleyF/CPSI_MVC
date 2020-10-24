@@ -1,12 +1,12 @@
-﻿using CPSI.Negocio.Interface;
-using CPSI.Negocio.Modelo;
+﻿using Educar.Negocio.Interface;
+using Educar.Negocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CPSI.Negocio.Service
+namespace Educar.Negocio.Service
 {
     public class TurmaService : ITurmaService
     {

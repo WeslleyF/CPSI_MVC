@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CPSI.Site.Areas.Diretor.Controllers
+namespace Educar.Site.Areas.Diretor.Controllers
 {   
     [Area("Diretor")]
     [Authorize]

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CPSI.Negocio.Modelo;
+using Educar.Negocio.Modelo;
 
-namespace CPSI.Negocio.Interface
+namespace Educar.Negocio.Interface
 {
     public interface IDisciplinaRepository : IRepository<Disciplina>
     {

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CPSI.Negocio.Interface;
-using CPSI.Negocio.Modelo;
+using Educar.Negocio.Interface;
+using Educar.Negocio.Modelo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CPSI.Site.Areas.Diretor.Controllers
+namespace Educar.Site.Areas.Diretor.Controllers
 {   
     [Area("Diretor")]
     [Authorize]

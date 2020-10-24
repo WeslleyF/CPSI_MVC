@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CPSI.Site.Data
+namespace Educar.Site.Data
 {
     public class IDentityContext : IdentityDbContext<IdentityUser>
     {

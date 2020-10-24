@@ -1,4 +1,4 @@
-﻿using CPSI.Site.Data;
+﻿using Educar.Site.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Threading.Tasks;
 
-namespace CPSI.Site.Extensions
+namespace Educar.Site.Extensions
 {
     public static class IdentityExtension
     {

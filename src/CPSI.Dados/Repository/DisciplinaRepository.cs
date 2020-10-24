@@ -1,11 +1,11 @@
-﻿using CPSI.Dados.Context;
-using CPSI.Negocio.Interface;
-using CPSI.Negocio.Modelo;
+﻿using Educar.Dados.Context;
+using Educar.Negocio.Interface;
+using Educar.Negocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CPSI.Dados.Repository
+namespace Educar.Dados.Repository
 {
     public class DisciplinaRepository : Repository<Disciplina>, IDisciplinaRepository
     {

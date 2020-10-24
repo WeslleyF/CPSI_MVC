@@ -1,10 +1,10 @@
-﻿using CPSI.Negocio.Modelo;
+﻿using Educar.Negocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace CPSI.Negocio.Interface
+namespace Educar.Negocio.Interface
 {
     public interface ITurmaService : IDisposable
     {

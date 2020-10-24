@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CPSI.Negocio.Modelo;
+using Educar.Negocio.Modelo;
 using Microsoft.EntityFrameworkCore;
 
-namespace CPSI.Dados.Context
+namespace Educar.Dados.Context
 {
     public class CPSIContext : DbContext
     {

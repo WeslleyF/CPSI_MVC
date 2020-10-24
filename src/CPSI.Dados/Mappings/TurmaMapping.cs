@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CPSI.Negocio.Modelo;
+using Educar.Negocio.Modelo;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CPSI.Dados.Mappings
+namespace Educar.Dados.Mappings
 {
     class TurmaMapping : IEntityTypeConfiguration<Turma>
     {

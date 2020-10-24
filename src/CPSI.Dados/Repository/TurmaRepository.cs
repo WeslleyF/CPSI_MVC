@@ -1,14 +1,14 @@
-﻿using CPSI.Dados.Context;
-using CPSI.Negocio.Modelo;
+﻿using Educar.Dados.Context;
+using Educar.Negocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CPSI.Negocio.Interface;
+using Educar.Negocio.Interface;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace CPSI.Dados.Repository
+namespace Educar.Dados.Repository
 {
     public class TurmaRepository : Repository<Turma>, ITurmaRepository
     {

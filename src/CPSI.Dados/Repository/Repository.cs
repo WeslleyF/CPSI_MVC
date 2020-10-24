@@ -4,12 +4,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using CPSI.Dados.Context;
-using CPSI.Negocio.Interface;
-using CPSI.Negocio.Modelo;
+using Educar.Dados.Context;
+using Educar.Negocio.Interface;
+using Educar.Negocio.Modelo;
 using Microsoft.EntityFrameworkCore;
 
-namespace CPSI.Dados.Repository
+namespace Educar.Dados.Repository
 {
     public abstract class Repository<TEntidade> : IRepository<TEntidade> where TEntidade : Entidade
     {

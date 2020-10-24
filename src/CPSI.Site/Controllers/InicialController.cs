@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CPSI.Site.Controllers
+namespace Educar.Site.Controllers
 {   
     [Authorize]
     public class InicialController : Controller

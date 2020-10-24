@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace CPSI.Dados.Migrations
+namespace Educar.Dados.Migrations
 {
     public partial class Inicial : Migration
     {

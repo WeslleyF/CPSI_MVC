@@ -1,13 +1,13 @@
-﻿using CPSI.Dados.Repository;
-using CPSI.Negocio.Interface;
-using CPSI.Negocio.Service;
+﻿using Educar.Dados.Repository;
+using Educar.Negocio.Interface;
+using Educar.Negocio.Service;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CPSI.Site.Extensions
+namespace Educar.Site.Extensions
 {
     //Classe para Injenção de depedência para diminuir poluição visual da Startup
     public static class DIExtension

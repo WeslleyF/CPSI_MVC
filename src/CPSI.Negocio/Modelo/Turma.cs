@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace CPSI.Negocio.Modelo
+namespace Educar.Negocio.Modelo
 {
     public class Turma : Entidade
     {   

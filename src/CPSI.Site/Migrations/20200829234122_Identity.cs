@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace CPSI.Site.Migrations
+namespace Educar.Site.Migrations
 {
     public partial class Identity : Migration
     {
