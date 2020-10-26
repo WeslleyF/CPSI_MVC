@@ -86,8 +86,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CPSI.Dados\Educar.Dados.csproj" />
-    <ProjectReference Include="..\CPSI.Negocio\Educar.Negocio.csproj" />
+    <ProjectReference Include="..\Educar.Dados\Educar.Dados.csproj" />
+    <ProjectReference Include="..\Educar.Negocio\Educar.Negocio.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
