@@ -12,10 +12,10 @@ namespace Educar.Dados.Repository
 {
     public class TurmaRepository : Repository<Turma>, ITurmaRepository
     {
-        private readonly CPSIContext _CPSIContext;
-        public TurmaRepository(CPSIContext context) : base(context)
+        private readonly EducarContext _EducarContext;
+        public TurmaRepository(EducarContext context) : base(context)
         {
-            _CPSIContext = context;
+            _EducarContext = context;
         }
 
         public async Task<Turma> ObterTurma(int id)

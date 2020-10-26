@@ -13,10 +13,10 @@ namespace Educar.Dados.Repository
 {
     public abstract class Repository<TEntidade> : IRepository<TEntidade> where TEntidade : Entidade
     {
-        protected readonly CPSIContext _Context;
+        protected readonly EducarContext _Context;
         protected readonly DbSet<TEntidade> DBSet;
 
-        protected Repository(CPSIContext context)
+        protected Repository(EducarContext context)
         {
             _Context = context;
             DBSet = context.Set<TEntidade>();

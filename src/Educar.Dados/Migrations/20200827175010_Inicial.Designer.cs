@@ -8,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Educar.Dados.Migrations
 {
-    [DbContext(typeof(CPSIContext))]
+    [DbContext(typeof(EducarContext))]
     [Migration("20200827175010_Inicial")]
     partial class Inicial
     {

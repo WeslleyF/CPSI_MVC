@@ -9,7 +9,7 @@ namespace Educar.Dados.Repository
 {
     public class DisciplinaRepository : Repository<Disciplina>, IDisciplinaRepository
     {
-        public DisciplinaRepository(CPSIContext context) : base(context)
+        public DisciplinaRepository(EducarContext context) : base(context)
         {
 
         }

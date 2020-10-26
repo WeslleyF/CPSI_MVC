@@ -34,7 +34,7 @@ namespace Educar.Site
             string conexao = _configuration.GetConnectionString("ConnPG");
 
             services.AddEntityFrameworkNpgsql()
-                .AddDbContext<CPSIContext>(op => op.UseNpgsql(conexao));
+                .AddDbContext<EducarContext>(op => op.UseNpgsql(conexao));
 
             services.ConfigurarIdentity(conexao);
 

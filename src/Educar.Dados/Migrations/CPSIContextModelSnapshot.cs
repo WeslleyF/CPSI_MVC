@@ -7,8 +7,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Educar.Dados.Migrations
 {
-    [DbContext(typeof(CPSIContext))]
-    partial class CPSIContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(EducarContext))]
+    partial class EducarContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

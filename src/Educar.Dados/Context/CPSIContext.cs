@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Educar.Dados.Context
 {
-    public class CPSIContext : DbContext
+    public class EducarContext : DbContext
     {
-        public CPSIContext(DbContextOptions<CPSIContext> options) : base(options)
+        public EducarContext(DbContextOptions<EducarContext> options) : base(options)
         {
             
         }
@@ -22,7 +22,7 @@ namespace Educar.Dados.Context
                 property.SetColumnType("varchar(100)");
 
 
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CPSIContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(EducarContext).Assembly);
             
             base.OnModelCreating(modelBuilder);
         }
