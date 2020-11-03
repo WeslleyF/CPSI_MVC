@@ -8,7 +8,6 @@ namespace Educar.Negocio.Modelo
     public class Turma : Entidade
     {   
        
-        public string Nome {get; set;}
         public int Ano { get; set; }
         [DisplayName("Horário")]
         public string Horario {get; set;}

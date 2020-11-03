@@ -3,15 +3,17 @@ using System;
 using Educar.Dados.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Educar.Dados.Migrations
 {
     [DbContext(typeof(EducarContext))]
-    partial class EducarContextModelSnapshot : ModelSnapshot
+    [Migration("20201103001244_Add_Documento")]
+    partial class Add_Documento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

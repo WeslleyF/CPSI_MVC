@@ -28,6 +28,7 @@ namespace Educar.Dados.Context
         }
 
         public DbSet<Disciplina> Disciplinas {get; set;}
-        public DbSet<Turma> Turmas { get; set; }
+        public DbSet<Turma> Turmas {get; set;}
+        public DbSet<Documento> Documentos {get; set;}
     }
 }

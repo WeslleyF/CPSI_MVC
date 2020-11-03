@@ -8,7 +8,6 @@ namespace Educar.Negocio.Modelo
     public class Disciplina : Entidade
     {
         [DisplayName("Disciplina")] 
-        public string Nome { get; set; }
 
         //Relacionamentos
         public List<Turma> turmas {get; set;}
