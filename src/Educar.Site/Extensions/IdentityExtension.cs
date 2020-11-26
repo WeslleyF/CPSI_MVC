@@ -14,8 +14,8 @@ namespace Educar.Site.Extensions
     {
         public static IServiceCollection ConfigurarIdentity(this IServiceCollection services, string conexao) 
         {
-            services.AddEntityFrameworkNpgsql().AddDbContext<IDentityContext>(options =>
-                options.UseNpgsql(conexao)
+            services.AddEntityFrameworkSqlServer().AddDbContext<IDentityContext>(options =>
+                options.UseSqlServer(conexao)
                 );
 
             services.AddDefaultIdentity<IdentityUser>(o => {

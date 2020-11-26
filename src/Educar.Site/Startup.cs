@@ -31,10 +31,10 @@ namespace Educar.Site
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            string conexao = _configuration.GetConnectionString("ConnPG");
+            string conexao = _configuration.GetConnectionString("Conn");
 
-            services.AddEntityFrameworkNpgsql()
-                .AddDbContext<EducarContext>(op => op.UseNpgsql(conexao));
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<EducarContext>(op => op.UseSqlServer(conexao));
 
             services.ConfigurarIdentity(conexao);
 
